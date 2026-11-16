@@ -960,8 +960,32 @@ button.chip:hover {
   font-family: var(--font-body-stack);
   font-size: 0.8rem;
 }
+.compare tbody th,
+.compare thead th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  box-shadow: 1px 0 0 var(--line);
+}
 .compare tbody th {
+  background: var(--card);
   width: 170px;
+}
+@media (max-width: 640px) {
+  .compare {
+    min-width: 560px;
+  }
+  .compare tbody th,
+  .compare thead th:first-child {
+    width: 112px;
+    min-width: 112px;
+  }
+  .compare th,
+  .compare td {
+    padding: 11px 12px;
+  }
+}
+.compare tbody th {
   font-size: 0.74rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
